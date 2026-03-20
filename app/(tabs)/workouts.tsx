@@ -17,6 +17,7 @@ import { InputField } from '@/components/common/input-field';
 import { PrimaryButton } from '@/components/common/primary-button';
 import { ScreenContainer } from '@/components/common/screen-container';
 import { FabButton } from '@/components/common/fab-button';
+import { FitnessAdMobBanner } from '@/components/ads/FitnessAdMobBanner';
 import {
   addWeeklyExercise,
   deleteWeeklyExercise,
@@ -502,6 +503,10 @@ export default function WorkoutsScreen() {
           {!selectedDayId && (
             <Text style={styles.emptyHint}>Egzersiz eklemek için yukarıdan bir gün seç.</Text>
           )}
+
+          <View style={styles.adMobContainer}>
+            <FitnessAdMobBanner />
+          </View>
         </ScrollView>
 
         <View style={styles.fabContainer}>
@@ -642,6 +647,7 @@ const styles = StyleSheet.create({
   flex: { flex: 1 },
   scroll: { flex: 1 },
   scrollContent: { paddingBottom: 32, paddingTop: 4, gap: 16 },
+  adMobContainer: { marginTop: 8, alignItems: 'center' },
   dayScroll: {
     flexDirection: 'row',
     alignItems: 'center',
