@@ -16,6 +16,27 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
+## Supabase setup
+
+1. `.env` dosyası **app** klasöründe olmalı (app.json ile aynı yerde). Yoksa:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. `.env` içinde şunları doldur:
+
+- `EXPO_PUBLIC_SUPABASE_URL` (Supabase proje URL’i)
+- `EXPO_PUBLIC_SUPABASE_ANON_KEY` (Supabase anon key)
+
+3. Supabase SQL Editor’da `supabase/migrations/supabase-setup.sql` dosyasını çalıştır.
+
+4. **Önemli:** `.env` değiştirdikten veya ilk kez ekledikten sonra uygulamayı cache temizleyerek başlat:
+
+   ```bash
+   npx expo start -c
+   ```
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
